@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "style.css" %}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ergebnis</title>
+</head>
+<body>
+<div class="container">
+    <div class="left">
+        <h1>Die Benzinkosten betragen:</h1>
+        <p>{{ ergebnis }}</p>
+        <a href="/">Neue Berechnung</a>
+    </div>
+    <div class="right">
+<h2>Erklärung zum Ergebnis</h2>
+<p>Die angezeigten Benzinkosten wurden aus Ihren Eingaben berechnet:</p>
+<ul>
+    <li><strong>Kilometer</strong> – die von Ihnen angegebene Strecke</li>
+    <li><strong>Verbrauch</strong> – Durchschnittsverbrauch Ihres Fahrzeugs in Litern pro 100 km</li>
+    <li><strong>Preis pro Liter</strong> – aktueller Kraftstoffpreis</li>
+</ul>
+<p>Für eine neue Berechnung klicken Sie auf <a href="/">„Neue Berechnung“</a>.</p>
+</div>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,124 @@
+body {
+    font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+    background: #E6E6E6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container für linke und rechte Spalte */
+.container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Linke Spalte */
+.left {
+    flex: 2;
+    min-width: 250px;
+    background-color: #F2F2F2;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0000000D;
+}
+
+/* Rechte Spalte */
+.right {
+    flex: 1;
+    background-color: #FDF6E3;
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 200px;
+    box-shadow: 0 2px 8px #0000000D;
+}
+
+/* Überschriften */
+h1 {
+    font-size: 200%;
+    text-shadow: #DAA520 2px 5px 8px;
+}
+
+/* Formularbox */
+form {
+    background-color: #FFFFFFB3;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #41546614;
+}
+
+/* Eingabefelder */
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+}
+
+/* BUTTON im edlen Stil */
+input[type="submit"] {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #1A2533;
+    background-color: #FFFFFF80;
+    border: 1px solid #FFFFFFCC;
+    box-shadow: 0 2px 5px #41546614;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    color: #006567;
+    transform: translateY(-4px) scale(1.05);
+    background-color: #FFFFFF;
+    box-shadow: 0 8px 15px #41546626;
+}
+
+/* Tablet-Ansicht */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* Smartphone-Ansicht */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 150%;
+    }
+    .right, .left {
+        min-width: 100%;
+        padding: 10px;
+    }
+    form {
+        padding: 10px;
+    }
+}
+
+/* Sehr kleine Geräte */
+@media (max-width: 360px) {
+    body {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 130%;
+    }
+    .container {
+        gap: 10px;
+    }
+    .right, .left {
+        padding: 8px;
+    }
+    input[type="submit"] {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "style.css" %}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Benzinkostenrechner</title>
+</head>
+<body>
+<div class="container">
+    <div class="left">
+        <h1>Benzinkostenrechner</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Berechnen">
+        </form>
+    </div>
+    <div class="right">
+        <h2>So funktioniert die App</h2>
+<p>Mit dieser Anwendung können Sie schnell und einfach Ihre Benzinkosten berechnen.</p>
+<ol>
+    <li><strong>Kilometer</strong> – Geben Sie die Strecke ein, die Sie gefahren sind oder fahren möchten.</li>
+    <li><strong>Verbrauch (l/100 km)</strong> – Diesen Wert finden Sie:
+        <ul>
+            <li>im Handbuch Ihres Fahrzeugs</li>
+            <li>auf der Hersteller-Webseite</li>
+            <li>oder auf dem Bordcomputer / Display Ihres Autos</li>
+        </ul>
+    </li>
+    <li><strong>Preis pro Liter (€)</strong> – Den aktuellen Preis sehen Sie an der Tankstelle oder in Preisvergleichs‑Apps.</li>
+</ol>
+<p>Klicken Sie auf <em>„Berechnen“</em>, um die Gesamtkosten zu sehen.  
+   Das Ergebnis erscheint auf der linken Seite.</p>
+</div>
+</div>
+</body>
+</html>
+
+
